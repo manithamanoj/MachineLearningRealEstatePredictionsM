@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Data</title>  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"> 
+
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+
+
+<body id="topScroll">
+
+<header>
+	
+	<nav class="navbar navbar-expand-lg header-top-bar" id="navbar">
+		<div class="container">			
+
+			<div class="collapse navbar-collapse" id="navbarmain">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="/visualization">Visualization</a></li>
+					<li class="nav-item "><a class="nav-link" href="/data">Data</a></li>					
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+	<section class="page-title bg-1">  
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-12">
+			<div class="block text-center">
+			  <span class="text-white"></span>
+			  <h1 class="text-capitalize mb-5 text-lg">Real Estate Prediction</h1>          
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+	<section class="prediction mt-5">
+	  <div class="container">
+		<div class="row">  
+		  <div class="col-lg-8">
+			<iframe src="{{ url_for('static',filename='Resources/ML.pdf')}}" width="150%" height="1000px"></iframe>
+			<div class="col-lg-4">
+				
+			</div>
+		  </div>
+		</div>
+	  
+	</section>
+
+
+	<!-- footer  -->
+	<footer class="footer  gray-bg">
+		<div class="container">	
+
+			<div class="footer-btm py-4 mt-5">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6">
+						<div class="copyright">
+							Copyright © 2022 </a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+  
+  </body>
+</html>

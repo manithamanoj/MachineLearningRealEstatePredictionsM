@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Real Estate Predictions</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+	
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/styles.css">
+
+
+<body id="topScroll">
+
+	<header>
+
+		<nav class="navbar navbar-expand-lg header-top-bar" id="navbar">
+			<div class="container">
+
+				<div class="collapse navbar-collapse" id="navbarmain">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link"  href="/about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="/visualization">Visualization</a></li>
+						<li class="nav-item"><a class="nav-link"  href="/data">Data</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="page-title bg-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="block text-center">
+						<span class="text-white"></span>
+						<h1 class="text-capitalize mb-5 text-lg">Real Estate Predictions</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="prediction mt-5">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-6">
+					<div class="prediction-wrap mt-5 mt-lg-0 pl-lg-5">
+
+						<form class="prediction-form" method="post" action="/predict" role="form" name="homeform">
+							
+
+								<div class="col-lg-8">
+									<div class="form-group">
+										<input id="SQFT" name="SQFT" type="text" class="form-control"
+											placeholder="Square Feet">
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="form-group">
+										<input id="Bedrooms" name="Bedrooms" type="text" class="form-control"
+											placeholder="Bedrooms">
+									</div>
+								</div>
+
+								<div class="col-lg-8">
+									<div class="form-group">
+										<input id="Bathrooms" name="Bathrooms" type="Number" class="form-control"
+											placeholder="Bathrooms">
+									</div>
+								</div>
+
+								<div class="col-lg-8">
+									<div class="form-group">
+										<input id="Year_Built" name="Year_Built" type="text" class="form-control"
+											placeholder="Year Built">
+									</div>
+								</div>
+
+								<div class="col-lg-8">
+									<div class="form-group">
+										<input id="zip" name="zip" type="text" class="form-control"
+											placeholder="Zipcode">
+									</div>
+								</div>
+
+
+								<input type="submit" name="Submit" class="btn btn-main btn-round-full">
+						</form>
+					</div>
+				</div>
+
+				
+				<div class="col-lg-6" >
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="mt-3" style="background-color:#f4f9fc;  border: 2px solid rgba(0, 0, 0, 0.05);">
+						<div class="feature-icon mb-3"id="ourDiv" >
+							<i class="icofont-support text-lg"></i>
+							<span id="myDiv" class="h3">Your Estimated price: {{result}}</span>	
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+			<br>
+			
+				<p class="Zipcode">Note: The following zipcodes can be used for predictions 85003,85004, 85006, 85007, 85008, 85009, 85012, 85013, 85014, 85015, 85016, 85017, 85018,
+					 85019, 85020, 85021, 85022, 85023, 85028, 85029, 85031, 85032, 85033, 85034, 85035, 85037, 85040, 85041, 85042, 85043, 85051, 85053, 85250, 85251, 85254, 
+					 85257, 85258, 85281, 85282, 85301, 85302, 85303, 85304, 85305, 85306, 85339, 85345
+					</p>
+				
+		
+		</div>
+	</section>
+	
+
+
+	<!-- footer  -->
+	<footer class="footer  gray-bg">
+		<div class="container">
+
+			<div class="footer-btm py-4 mt-5">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6">
+						<div class="copyright">
+							Copyright © 2022 </a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
