@@ -40,20 +40,28 @@
 	</section>
 
 	<section class="prediction mt-5">
-	  <div class="container">
-		<div class="row">  
-		  <div class="col-lg-12 housing-data-table" >
-			{% for table in tables %}
-            {{titles[loop.index-12]}}
-            {{ table|safe }}
-            {% endfor %}
-			</div>
-			<div class="col-lg-4">
-				
-			</div>
-		  </div>
-		</div>
-	  
+		<body>
+			<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+			<script src="d3.min.js?v=3.2.8"></script>
+	
+			<script type="text/javascript"charset="utf-8">
+				d3.text("Resources/final_combined_data.csv", function(data) {
+					var parsedCSV = d3.csv.parseRows(data);
+	
+					var container = d3.select("body")
+						.append("table")
+	
+						.selectAll("tr")
+							.data(parsedCSV).enter()
+							.append("tr")
+	
+						.selectAll("td")
+							.data(function(d) { return d; }).enter()
+							.append("td")
+							.text(function(d) { return d; });
+				});
+			</script>
+		</body>
 	</section>
 
 
