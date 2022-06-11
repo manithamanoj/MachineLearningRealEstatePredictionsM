@@ -147,8 +147,7 @@ def visualization():
     return render_template('visualization.html')
 @app.route('/data')
 def data():
-    db_string = f"postgresql://postgres:Mypostgrespwd@127.0.0.1:5432/real_estate_preditions"
-    engine = create_engine(db_string)
+    engine = create_engine(os.environ.get('DATABASE_URL', ''))
     conn = engine.connect()
     df = pd.read_sql("SELECT * FROM combined_data", con = engine)
     df1 = pd.read_sql("SELECT * FROM education_data", con = engine)
