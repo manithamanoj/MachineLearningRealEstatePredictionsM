@@ -147,15 +147,16 @@ def visualization():
     return render_template('visualization.html')
 @app.route('/data')
 def data():
-    engine = create_engine(os.environ.get('DATABASE_URL', ''))
-    conn = engine.connect()
-    df = pd.read_sql("SELECT * FROM combined_data", con = engine)
-    # df1 = pd.read_sql("SELECT * FROM education_data", con = engine)
-    # merged_df=df.merge(df1, how='left', on='zip')
-    # merged_df.rename(columns={'price':"House Price",'zip':"Zipcode",'status':"Status",'year_built':'Year','bedrooms':'Bedrooms','bathrooms':'Bathrooms','approx_sqft':'Approx SQFT','crimerate':'Crime Rate','elem_school_district':'Elem School District','highest_rated_school':'School Ratings'},inplace=True)
-    # merged_df.reset_index() 
-    # housing_data=merged_df[["House Price","Zipcode","Status",'Year','Bedrooms','Bathrooms','Approx SQFT','Crime Rate','Elem School District','School Ratings']]
-    return render_template('data.html',tables=[df.to_html(classes='data table')], titles=df.columns.values)
+    return render_template('data.html')
+    # engine = create_engine(os.environ.get('DATABASE_URL', ''))
+    # conn = engine.connect()
+    # df = pd.read_sql("SELECT * FROM combined_data", con = engine)
+    # # df1 = pd.read_sql("SELECT * FROM education_data", con = engine)
+    # # merged_df=df.merge(df1, how='left', on='zip')
+    # # merged_df.rename(columns={'price':"House Price",'zip':"Zipcode",'status':"Status",'year_built':'Year','bedrooms':'Bedrooms','bathrooms':'Bathrooms','approx_sqft':'Approx SQFT','crimerate':'Crime Rate','elem_school_district':'Elem School District','highest_rated_school':'School Ratings'},inplace=True)
+    # # merged_df.reset_index() 
+    # # housing_data=merged_df[["House Price","Zipcode","Status",'Year','Bedrooms','Bathrooms','Approx SQFT','Crime Rate','Elem School District','School Ratings']]
+    # return render_template('data.html',tables=[df.to_html(classes='data table')], titles=df.columns.values)
 
 if __name__ == '__main__':
  app.run(debug=True)
